@@ -3,9 +3,8 @@ function Vector(arr) {
 
   this.add = vector2 => {
     if(this.value.length === vector2.value.length) {
-      let newVector = [];
-      vector2.value.forEach((element, key) => {
-        newVector[key] = this.value[key] + element;
+      let newVector = vector2.value.map((element, key) => {
+        return this.value[key] + element;
       });
       return new Vector(newVector);
     } else {
@@ -15,9 +14,8 @@ function Vector(arr) {
 
   this.subtract = vector2 => {
     if(this.value.length === vector2.value.length) {
-      let newVector = [];
-      vector2.value.forEach((element, key) => {
-        newVector[key] = this.value[key] - element;
+      let newVector = vector2.value.map((element, key) => {
+        return this.value[key] - element;
       });
       return new Vector(newVector);
     } else {
@@ -27,11 +25,9 @@ function Vector(arr) {
 
   this.dot = vector2 => {
     if(this.value.length === vector2.value.length) {
-      let sum = 0;
-      vector2.value.forEach((element, key) => {
-        sum += this.value[key] * element;
-      });
-      return sum;
+      return vector2.value.reduce((sum, element, key) => {
+        return sum + this.value[key] * element;
+      }, 0);
     } else {
       return 'Error! Vectors have different lengths';
     }

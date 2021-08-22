@@ -1,6 +1,7 @@
 function deleteProperty(obj, prop) {
-  delete obj[prop];
-  return obj;
+  let data = {...obj};
+  delete data[prop];
+  return data;
 }
 
 const data = { a : 1, b : 2};
