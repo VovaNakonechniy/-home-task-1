@@ -1,6 +1,5 @@
 const student = {
   greeting: 'Hello, Student!',
-
   getGreeting() {
     const greeting = 'Hello, Earth!';
     return this.greeting;
