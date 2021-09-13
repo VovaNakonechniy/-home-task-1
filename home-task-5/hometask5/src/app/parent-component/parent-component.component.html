@@ -1,0 +1,9 @@
+<app-child-component [firstName]="firstName" (fullName)="setFullName($event)"></app-child-component>
+<div *ngIf="fullName">Full Name: {{ fullName }}</div>
+<hr>
+<ul *ngIf="citiesShow">
+    <li style="list-style-type:none;" *ngFor="let city of cities; let isOdd = odd; let isEven = even" [ngClass]="{evenCity: isEven, oddCity: isOdd}">{{ city.name }}</li>
+</ul>
+<button (click)="loadCities()">Load Cities</button>
+<hr>
+<p [style.color]="'red'" #paragraph>Simple Paragraph</p>
