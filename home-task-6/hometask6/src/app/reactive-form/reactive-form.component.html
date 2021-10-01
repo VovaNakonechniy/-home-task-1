@@ -1,0 +1,32 @@
+<div class="reactive-form">
+  <div class="header">
+    <h1>Task 3</h1>
+  </div>
+  <div class="form-wrap">
+    <form [formGroup]="reactiveForm">
+      <div class="row">
+        <div>
+          <h2>First Name</h2>
+          <input type="text" formControlName="firstName" placeholder="first name">
+        </div>
+        <div>
+          <h2>Last Name</h2>
+          <input type="text" formControlName="lastName" placeholder="last name">
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <h2>Email</h2>
+          <input type="text" formControlName="email" placeholder="email">
+        </div>
+        <div>
+          <h2>Phone number</h2>
+          <input type="text" formControlName="phone" placeholder="phone">
+        </div>
+      </div>
+      <div class="submit-button">
+        <button type="submit" [disabled]="reactiveForm.invalid">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

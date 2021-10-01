@@ -1,0 +1,55 @@
+.reactive-form {
+  margin-bottom: 100px;
+}
+
+.header {
+  text-align: center;
+
+  h1 {
+    font-size: 48px;
+  }
+}
+
+.form-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+
+  div {
+    margin: 5px;
+
+    input {
+      font-size: 14px;
+      padding: 5px;
+    }
+  }
+} 
+
+h2 {
+  font-size: 18px;
+}
+
+input.ng-invalid {
+  border: 1px solid red;
+}
+
+.submit-button {
+  text-align: right;
+  margin: 10px 5px 0px 0;
+
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+}
